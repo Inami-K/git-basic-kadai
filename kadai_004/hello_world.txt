@@ -1,0 +1,56 @@
+PS C:\Users\whand> mkdir git_challenge
+
+
+    ディレクトリ: C:\Users\whand
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2024/02/16      4:39                git_challenge
+
+
+PS C:\Users\whand> cd
+PS C:\Users\whand> cd git_challenge
+PS C:\Users\whand\git_challenge> git init
+Initialized empty Git repository in C:/Users/whand/git_challenge/.git/
+PS C:\Users\whand\git_challenge> mkdir hello_world.txt
+
+
+    ディレクトリ: C:\Users\whand\git_challenge
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2024/02/16      4:40                hello_world.txt
+
+
+PS C:\Users\whand\git_challenge> cd hello_world.txt
+PS C:\Users\whand\git_challenge\hello_world.txt> echo "Hello,World!" >> hello_world.txt
+PS C:\Users\whand\git_challenge\hello_world.txt> git add hello_world.txt
+PS C:\Users\whand\git_challenge\hello_world.txt> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello_world.txt
+
+PS C:\Users\whand\git_challenge\hello_world.txt> git commit -m "Hello,World!を追記"
+[main (root-commit) a6ecf9c] Hello,World!を追記
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt/hello_world.txt
+PS C:\Users\whand\git_challenge\hello_world.txt> echo "こんにちは、世界！" >> hello_world.txt
+PS C:\Users\whand\git_challenge\hello_world.txt> git add hello_world.txt
+PS C:\Users\whand\git_challenge\hello_world.txt> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello_world.txt
+
+PS C:\Users\whand\git_challenge\hello_world.txt> git commit -m "日本語訳を追記"
+[main 449627d] 日本語訳を追記
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\whand\git_challenge\hello_world.txt> git log --oneline
+449627d (HEAD -> main) 日本語訳を追記
+a6ecf9c Hello,World!を追記
